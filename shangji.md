@@ -34,7 +34,7 @@
   mean=1/m*np.sum(Z)                          #标准化
   var=1/m*((Z-mean)**2)                       #正则化步骤，计算方差
   Znorm=(Z-mean)/(np.sqrt(var+epsilon))       #epsilon方式除以0的参数，归一化训练稳定加速收敛，但是将输入分布标准到正太分布中（均值0方差1）会对神经网络本身的表达能力限制
-  Z_tilde = gamma * Znorm + beta             # 重参数化，最终输出，表达能力提升
+  Z_tilde = gamma * Znorm + beta             # 重参数化，最终输出，表达能力提升（对上面代码的逆向）
 ```
 
 
