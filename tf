@@ -1,6 +1,7 @@
 ```python
 注意：张量tensor类型是tf.Tensor(data,shape，dtype),如果想只拿到数据就要张量后面加.numpy()
     很多在np中的操作这里都有，比如初始化1和0啥的，加减
+    kernel就是权重矩阵W，bias就是权重B
 
 tf.constant(value, dtype=None, shape=None, name='Const')#方法用来创建一个不可变的张量，用于表示常量（比如输入数据、超参数、固定权重等）
 tf.Variable(initial_value, dtype=None, trainable=True, name=None)#可变的张量（tensor），它的值在训练过程中可以被更新，常用于存储神经网络的权重和偏置。trainable表示是否在optimizer.apply_gradients被更新（默认是true）
