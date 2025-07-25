@@ -1,5 +1,5 @@
 ```python
-np.random.permutation(A,axis=)    #打乱顺序，返回新的队列
+np.random.permutation(A,axis=)    #打乱顺序，返回新的排列,并且A可以是一个值代表从0开始的A个数量的排列
 np.random.shuffled(A)          #直接打乱
 
 np.random.seed(num)    #num是种子
