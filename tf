@@ -1,5 +1,6 @@
 ```python
 注意：张量tensor类型是tf.Tensor(data,shape，dtype),如果想只拿到数据就要张量后面加.numpy()
+    很多在np中的操作这里都有，比如初始化1和0啥的，加减
 
 tf.constant(value, dtype=None, shape=None, name='Const')#方法用来创建一个不可变的张量，用于表示常量（比如输入数据、超参数、固定权重等）
 tf.Variable(initial_value, dtype=None, trainable=True, name=None)#可变的张量（tensor），它的值在训练过程中可以被更新，常用于存储神经网络的权重和偏置。trainable表示是否在optimizer.apply_gradients被更新（默认是true）
@@ -20,5 +21,10 @@ tf.one_hot(                                    #one-hot编码用于类别的分�
     on_value=1,   # one-hot 编码中 "True" 的值，默认为 1
     off_value=0,  # one-hot 编码中 "False" 的值，默认为 0
     axis=-1     # one-hot 编码的轴，默认为最后一维            axis=-1 也表示将 one-hot 编码应用于张量的最后一维。
+    dtype
+    name
 )
+
+tf.nn.relu(features, name=None)#激活函数
+
 ```
