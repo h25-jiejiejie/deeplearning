@@ -71,5 +71,14 @@ test_loss, test_accuracy = model.evaluate(X_test, y_test)
 print(f"Test Loss: {test_loss}, Test Accuracy: {test_accuracy}")
 
 
+tf网络：在tf.keras.layers.有
+在初始化网络的时候需要定义输入层(inputs)，但是继承自定义类后，就不需要显式表达出来
+同样的outputs也不需要
+这里在call方法中直接调用就行了
+其中call方式是调用自定有层的步骤，输入参数是层的输入（还有一些参数：training（是不是只在训练的时候使用，dropout层这种），mask（在 NLP 模型中常用），**kwargs（允许用户扩展额外参数，自定义 forward 的某些控制开关））
+
+
+
+
 
 ```
