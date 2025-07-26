@@ -32,6 +32,11 @@ numpy.lib.stride_tricks.as_strided(x, shape=None, strides=None, subok=False, wri
 #strides:新视图中每个维度的步长（单位字节），决定窗口滑动的方式
 #subok:是否返回子视图
 #writeable:返回视图是不是可写
-
+#注1：shape = (out_h, out_w, kernel_h, kernel_w)其中：
+#out_h = (H - kernel_h) // stride_h + 1
+#out_w = (W - kernel_w) // stride_w + 1
+#注2：strides = (s0 * stride_h, s1 * stride_w, s0, s1)其中：
+#s0 = 原数组.strides[0]（行跨度）
+#s1 = 原数组.strides[1]（列跨度）
 
 ```
